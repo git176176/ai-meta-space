@@ -74,7 +74,12 @@ class BrainTask(Base):
         'hotspot_tracking', # 热点跟踪
         'outline',          # 自动提纲
         'report',           # 生成报告
-        'schedule'          # 日程规划
+        'schedule',         # 日程规划
+        'ppt',              # PPT助手
+        'plan',             # 计划专家
+        'critic',           # 批评家
+        'writer',           # 写作助手
+        'analysis'          # 分析专家
     ), nullable=False)
     status = Column(Enum('todo', 'doing', 'done'), default='todo')
     tags = Column(Text, nullable=True)  # JSON格式存储标签
