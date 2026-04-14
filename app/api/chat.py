@@ -118,7 +118,7 @@ async def send_message(
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "MiniMax-Text-01",
+                    "model": "MiniMax-M2.7",
                     "messages": messages
                 }
             )
@@ -143,7 +143,7 @@ async def send_message(
         session_id=session_id,
         role="assistant",
         content=ai_content,
-        model_used="MiniMax-Text-01",
+        model_used="MiniMax-M2.7",
         tokens_used=usage.get("total_tokens")
     )
     db.add(ai_msg)
